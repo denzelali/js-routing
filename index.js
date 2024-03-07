@@ -10,7 +10,7 @@ app.use(( '/user' ), UserRoute)
 
 //Error if wrong endpoint
 app.use((req, res, next) => {
-    const err = new Error("Not Fount");
+    const err = new Error("Not Found");
     err.status = 404;
     next(err);
 });
